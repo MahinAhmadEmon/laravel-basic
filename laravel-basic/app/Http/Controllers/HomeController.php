@@ -19,4 +19,12 @@ class HomeController extends Controller
         ];
         return view("index", $data);
     }
+
+    public function incomes() {
+        $incomes = DB::table('income')->get();
+        $data = [
+            'incomes' => $incomes
+        ];
+        return view("incomes", $data);
+    }
 }
