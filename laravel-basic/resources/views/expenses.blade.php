@@ -10,18 +10,14 @@
     <th>Date</th>
     <th>Amount</th>
   </tr>
+  @foreach($expenses as $key => $expense)
   <tr>
-    <td>1</td>
-    <td>Food</td>
-    <td>2023-01-01</td>
-    <td>50.00</td>
+    <td>{{ $key+1 }}</td>
+    <td>{{ $expense->title }}</td>
+    <td>{{ $expense->date }}</td>
+    <td>{{ $expense->amount }}</td>
   </tr>
-  <tr>
-    <td>2</td>
-    <td>Travel</td>
-    <td>2023-01-02</td>
-    <td>100.00</td>
-  </tr>
+  @endforeach
 </table>
 
 </body>

@@ -27,4 +27,12 @@ class HomeController extends Controller
         ];
         return view("incomes", $data);
     }
+
+    public function expenses() {
+        $expenses = DB::table('expense')->get();
+        $data = [
+            'expenses' => $expenses
+        ];
+        return view("expenses", $data);
+    }
 }
